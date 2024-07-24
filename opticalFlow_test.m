@@ -1,6 +1,6 @@
 clearvars;
 vidReader = VideoReader('test.mp4','CurrentTime',11);
-opticFlow = opticalFlowHS
+opticFlow = opticalFlowHS();
 
 h = figure;
 movegui(h);
