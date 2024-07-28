@@ -13,7 +13,7 @@ while hasFrame(vidReader)
     flow = estimateFlow(opticFlow,frameGray);
     imshow(frameRGB)
     hold on
-    plot(flow,'DecimationFactor',[5 5],'ScaleFactor',60,'Parent',hPlot);
+    plot(flow,'DecimationFactor',[5 5],'ScaleFactor',600,'Parent',hPlot);
     hold off
     pause(10^-3)
 end
