@@ -1,0 +1,1 @@
+sst = ncread(CUsers민경윤Desktop여름연구OpticalFlow2024.07.20 0000_UTC_LE3229146work00gk2a_ami_le3_sst01d_ko020lc_202407200000.nc,DQF_SST01D)

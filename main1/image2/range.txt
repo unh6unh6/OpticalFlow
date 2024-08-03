@@ -1,0 +1,4 @@
+minX = 521;
+maxX = 550;
+minY = 181;
+maxY = 210;

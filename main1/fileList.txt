@@ -1,0 +1,7 @@
+00
+gk2a_ami_le2_sst_ko020lc_202405030350.nc
+gk2a_ami_le2_sst_ko020lc_202405030340.nc
+gk2a_ami_le2_sst_ko020lc_202405030330.nc
+gk2a_ami_le2_sst_ko020lc_202405030320.nc
+gk2a_ami_le2_sst_ko020lc_202405030310.nc
+gk2a_ami_le2_sst_ko020lc_202405030300.nc

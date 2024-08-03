@@ -24,9 +24,13 @@ clc;
 % Im1=imread('2D_vortices_1.tif');
 % Im2=imread('2D_vortices_2.tif');
 
+%{
+Im1=imread('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\main2\image1\gk2a_ami_le2_sst_ko020lc_202405122100.tif');
+Im2=imread('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\main2\image1\gk2a_ami_le2_sst_ko020lc_202405122110.tif');
 
-Im1=imread('wall_jet_1.tif');
-Im2=imread('wall_jet_2.tif');
+Im1 = rgb2gray(Im1);
+Im2 = rgb2gray(Im2);
+%}
 
 
 

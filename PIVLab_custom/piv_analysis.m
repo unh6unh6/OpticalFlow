@@ -15,8 +15,8 @@
     % typevec: type vector
     % corr_map: corellation map
 
-image1=imread('White_Oval_1.tif');
-image2=imread('White_Oval_2.tif');
+image1=imread('./image1/gk2a_ami_le2_sst_ko020lc_202405122100.png');
+image2=imread('./image1/gk2a_ami_le2_sst_ko020lc_202405122110.png');
 
     %%  
     %{
@@ -48,10 +48,10 @@ image2=imread('White_Oval_2.tif');
 piv_setting = cell(15, 2);
 
 % Pass1의 Interrogation area (ex. 32x32 pixels)
-piv_setting{1, 2} = 32;
+piv_setting{1, 2} = 64;
 
 % Step size (ex. 16 pixels)
-piv_setting{2, 2} = 16;
+piv_setting{2, 2} = 32;
 
 piv_setting{3, 2} = 1; % Sub-pixel method , 1 : Gaussian,   2: 2D-Gaussian
 piv_setting{4, 2} = []; % Mask (ex. no mask or use a specific mask)
@@ -67,7 +67,7 @@ piv_setting{7, 2} = 48;
 piv_setting{8, 2} = 32;
 
 % Pass4 area 설정
-piv_setting{9, 2} = 5;
+piv_setting{9, 2} = 24;
 
 piv_setting{10, 2} = '*linear';
 piv_setting{11, 2} = 0; % reapeat
