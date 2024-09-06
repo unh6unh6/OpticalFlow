@@ -1,13 +1,13 @@
 
 clc;
-clearvars;
+%clearvars;
 
 fileList = fopen('fileList.txt', 'r');
 
-minX = 471;
-maxX = 670;
-minY = 611;
-maxY = 810;
+minX = 201;
+maxX = 300;
+minY = 241;
+maxY = 340;
 
 while ~feof(fileList)
     tline = fgetl(fileList);
@@ -24,7 +24,7 @@ while ~feof(fileList)
     save_filename = tline(1:strfind(tline, ".nc")-1);
     save_filename = strcat(save_filename, '.tif');
 
-    savepath = "./image1";
+    savepath = "./image4";
     if ~exist(savepath, 'dir')
             mkdir(savepath);
     end

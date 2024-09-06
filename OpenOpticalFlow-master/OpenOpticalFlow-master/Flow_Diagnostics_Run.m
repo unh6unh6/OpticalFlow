@@ -24,13 +24,13 @@ clc;
 % Im1=imread('2D_vortices_1.tif');
 % Im2=imread('2D_vortices_2.tif');
 
-%{
+
 Im1=imread('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\main2\image1\gk2a_ami_le2_sst_ko020lc_202405122100.tif');
 Im2=imread('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\main2\image1\gk2a_ami_le2_sst_ko020lc_202405122110.tif');
 
 Im1 = rgb2gray(Im1);
 Im2 = rgb2gray(Im2);
-%}
+
 
 
 
@@ -153,10 +153,10 @@ uy=uy_corr;    %%%%%
 %% show the images and processed results
 %% plot the images, velocity vector, and streamlines in the initail and
 %% refined estimations
-plots_set_1;
+%plots_set_1;
 
 %% plot the fields of velocity magnitude, vorticity and the second invariant Q
-plots_set_2;
+%plots_set_2;
 
 
 

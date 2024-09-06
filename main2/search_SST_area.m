@@ -1,4 +1,4 @@
-window_size = 100;
+window_size = 200;
 
 filename = "gk2a_ami_le2_sst_ko020lc_202405122100.nc";
 data1 = ncread(filename, '/SST');
