@@ -36,8 +36,13 @@ Im2 = rgb2gray(Im2);
 %Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\value_data\gk2a_ami_le2_sst_ko020lc_202405122150.mat").sst_image;
 %Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\value_data\gk2a_ami_le2_sst_ko020lc_202405122200.mat").sst_image;
 
-Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\vector_field_3\mean_data\2145.mat").sst_image;
-Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\vector_field_3\mean_data\2155.mat").sst_image;
+Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\scalar1.mat").sst;
+Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\GT_scalar2.mat").sst;
+
+%{
+Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\2100.mat").sst;
+Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\2110.mat").sst;
+%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -164,8 +169,10 @@ uy=uy_corr;    %%%%%
 %plots_set_2;
 
 
-save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\vector_field_3\velocity5.mat', 'ux', 'uy');
+%save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\calc_vector_field.mat', 'ux', 'uy');
+save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\calc_vector_field.mat', 'ux', 'uy');
 
+%{
 figure();
 gx=50; offset=1;
 h = vis_flow (ux, uy, gx, offset, 5, 'm');
@@ -181,7 +188,7 @@ saveas(gcf, 'C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\vector_fi
 fig = gcf;
 frame = getframe(fig);
 save("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\vector_field_3\velocity_field5.mat", 'frame');
-
+%}
 
 
 
