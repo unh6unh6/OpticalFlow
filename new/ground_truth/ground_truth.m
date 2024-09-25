@@ -1,5 +1,5 @@
 %% load Scalar1
-scalar1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\scalar1.mat").sst;
+scalar1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\scalar1.mat").sst;
 
 
 %%  ground truth vector field (uniform flow)
@@ -14,7 +14,7 @@ flow_direction_rad = deg2rad(flow_direction_deg);
 ux = flow_velocity * cos(flow_direction_rad) * ones(size_of_scalar); % 모든 값이 flow_velocity인 ux
 uy = flow_velocity * sin(flow_direction_rad) * ones(size_of_scalar); % 모든 값이 flow_velocity인 uy
 
-save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\GT_vector_field.mat', 'ux', 'uy');
+save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\GT_vector_field.mat', 'ux', 'uy');
 
 
 %% ground truth Scalar2
@@ -46,4 +46,4 @@ end
 %}
 
 data = struct('sst', scalar2);
-save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\GT_scalar2.mat', '-struct', 'data');
+save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\GT_scalar2.mat', '-struct', 'data');

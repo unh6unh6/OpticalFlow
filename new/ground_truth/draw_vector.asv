@@ -1,6 +1,6 @@
 % draw vector field
-gt_vector_field = load("data\GT_vector_field.mat");
-calc_vector_field = load("data\calc_vector_field.mat");
+gt_vector_field = load("\data\GT_vector_field.mat");
+calc_vector_field = load("calc_vector_field.mat");
 
 
 size_of_scalar = 20;

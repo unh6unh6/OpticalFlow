@@ -36,8 +36,8 @@ Im2 = rgb2gray(Im2);
 %Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\value_data\gk2a_ami_le2_sst_ko020lc_202405122150.mat").sst_image;
 %Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\value_data\gk2a_ami_le2_sst_ko020lc_202405122200.mat").sst_image;
 
-Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\scalar1.mat").sst;
-Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\GT_scalar2.mat").sst;
+Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\scalar1.mat").sst;
+Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\GT_scalar2.mat").sst;
 
 %{
 Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\2100.mat").sst;
@@ -170,7 +170,7 @@ uy=uy_corr;    %%%%%
 
 
 %save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\calc_vector_field.mat', 'ux', 'uy');
-save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\calc_vector_field.mat', 'ux', 'uy');
+save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\calc_vector_field.mat', 'ux', 'uy');
 
 %{
 figure();
