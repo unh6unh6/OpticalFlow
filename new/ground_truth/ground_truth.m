@@ -6,13 +6,13 @@ scalar1_with_sub_area = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlo
 
 % Set parameters
 flow_velocity = 5;
-flow_direction_deg = 30;
+flow_direction_deg = 0;
 size_of_scalar = 20;
 
 % Calculate Ux, Uy field
 flow_direction_rad = deg2rad(flow_direction_deg);
 ux = flow_velocity * cos(flow_direction_rad) * ones(size_of_scalar); % 모든 값이 flow_velocity인 ux
-uy = flow_velocity * -sin(flow_direction_rad) * ones(size_of_scalar); % 모든 값이 flow_velocity인 uy
+uy = flow_velocity * sin(flow_direction_rad) * ones(size_of_scalar); % 모든 값이 flow_velocity인 uy
 
 save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\GT_vector_field.mat', 'ux', 'uy');
 
@@ -24,19 +24,22 @@ is_visit = zeros(size_of_scalar);
 
 for i = 1:size_of_scalar
     for j = 1:size_of_scalar
-        prev_i = round(i - uy(i, j) + flow_velocity);
-        prev_j = round(j - ux(i, j) + flow_velocity);
+
+        prev_i = i + round(uy(i, j)) + flow_velocity;
+        prev_j = j - round(ux(i, j)) + flow_velocity;
 
         scalar2(i, j) = scalar1_with_sub_area(prev_i, prev_j);
-             %{
-        new_i = round(i + uy(i, j));
+
+    %{
+        new_i = round(i - uy(i, j));
         new_j = round(j + ux(i, j));
 
         if new_i >= 1 && new_i <= size_of_scalar && new_j >= 1 && new_j <= size_of_scalar
             scalar2(new_i, new_j) = scalar1(i, j);
             is_visit(new_i, new_j) = true;
         end
-             %}
+    %}
+
     end
 end
 %{
