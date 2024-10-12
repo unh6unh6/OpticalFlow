@@ -10,7 +10,7 @@ scalar1_with_sub_area = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlo
 offset = (x2 - x1)/2;
 size_of_scalar = x1;
 
-flow_velocity = 5; % step / pixel
+flow_velocity = 1; % step / pixel
 flow_direction_deg = 0;
 
 % Calculate Ux, Uy field
