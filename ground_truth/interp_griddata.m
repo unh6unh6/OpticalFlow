@@ -7,7 +7,7 @@ scalar_sub = load("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\da
 offset = 5; % (sub area length / 2)
 
 flow_velocity = 0.5;
-flow_direction_deg = 90;
+flow_direction_deg = 45;
 
 SPATIAL_RESOLUTION_RATIO = 2000; % 2000 meters : 1 pixel
 TIME_RESOLUTION_RATIO = 600; % 600 seconds : 1 snapshot
@@ -18,7 +18,7 @@ TIME_RESOLUTION_RATIO = 600; % 600 seconds : 1 snapshot
 % Set u,v velocity
 flow_direction_rad = deg2rad(flow_direction_deg);
 u= flow_velocity * cos(flow_direction_rad); % meter/sec
-v=  flow_velocity * sin(flow_direction_rad); % meter/sec
+v= flow_velocity * sin(flow_direction_rad); % meter/sec
 
 % Set dt
 dt = TIME_RESOLUTION_RATIO; % second
@@ -54,9 +54,18 @@ SHIFTED_GRID_Y = ORIGINAL_GRID_Y + dy;
 scalar_sub_interp = griddata(SHIFTED_GRID_X, SHIFTED_GRID_Y, scalar_sub, ORIGINAL_GRID_X, ORIGINAL_GRID_Y, 'v4');
 
 % Remove Sub Area
+scalar1 = scalar_sub(1+offset:cols-offset, 1+offset:rows-offset);
 scalar2 = scalar_sub_interp(1+offset:cols-offset, 1+offset:rows-offset);
 
 %% Save Scalar2
 
 data1 = struct('sst', scalar2);
 save("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\scalar2.mat",'-struct', 'data1');
+
+%% Draw Original Scalar, Shifted Scalar and Vector Field
+
+pcolor(scalar1);
+pcolor(scalar2);
+
+% 수정
+
