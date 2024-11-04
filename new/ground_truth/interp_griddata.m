@@ -1,7 +1,6 @@
 %interp with griddata
 
-%scalar = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\scalar1").sst;
-scalar_sub = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\griddata\scalar1_with_sub_area.mat").sst;
+scalar_sub = load("C:\Users\min\Desktop\여름연구\OpticalFlow\new\ground_truth\data\griddata\scalar1_with_sub_area.mat").sst;
 offset = 5;
 
 [rows, cols] = size(scalar_sub);
@@ -35,4 +34,4 @@ scalar2 = scalar_sub_interp(1+offset:cols-offset, 1+offset:rows-offset);
 data1 = struct('sst', scalar2);
 
 
-save("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\griddata\scalar2.mat",'-struct', 'data1');
+save("C:\Users\min\Desktop\여름연구\OpticalFlow\new\ground_truth\data\griddata\scalar2.mat",'-struct', 'data1');

@@ -14,51 +14,9 @@ clc;
 %% For 12, 14 and 14 bit images, they should be converted to 8 bit images
 %% befor optical flow computation
 
-%Im1=imread('White_oval_1.tif');
-%Im2=imread('White_Oval_2.tif');
+Im1 = load("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\scalar1.mat").sst;
+Im2 = load("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\scalar2.mat").sst;
 
-% Im1=imread('vortex_pair_particles_1.tif');
-% Im2=imread('vortex_pair_particles_2.tif');
-
-
-% Im1=imread('2D_vortices_1.tif');
-% Im2=imread('2D_vortices_2.tif');
-
-%{
-Im1=imread('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\image\gk2a_ami_le2_sst_ko020lc_202405122100.tif');
-Im2=imread('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\image\gk2a_ami_le2_sst_ko020lc_202405122110.tif');
-
-Im1 = rgb2gray(Im1);
-Im2 = rgb2gray(Im2);
-%}
-
-
-%Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\value_data\gk2a_ami_le2_sst_ko020lc_202405122150.mat").sst_image;
-%Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\final\value_data\gk2a_ami_le2_sst_ko020lc_202405122200.mat").sst_image;
-
-
-
-%{
-Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\2100.mat").sst;
-Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\2110.mat").sst;
-%}
-
-%% 고해상도 interpolation
-
-%{
-Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\scalar1_interp.mat").sst;
-Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\GT_scalar2.mat").sst;
-%}
-
-
-%% griddata interpolation
-
-Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\griddata\scalar1.mat").sst;
-Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\griddata\scalar2.mat").sst;
-
-%%
-%Im1 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\test\1.mat").scalar1;
-%Im2 = load("C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\test\2.mat").scalar2;
 %%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,8 +144,7 @@ uy=uy_corr;    %%%%%
 %plots_set_2;
 
 
-%save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\data\calc_vector_field.mat', 'ux', 'uy');
-save('C:\Users\민경윤\Desktop\여름연구\OpticalFlow\new\ground_truth\data\calc_vector_field.mat', 'ux', 'uy');
+save('C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\OF_vector_field.mat', 'ux', 'uy');
 
 %{
 figure();
