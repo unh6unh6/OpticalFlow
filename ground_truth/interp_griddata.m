@@ -1,4 +1,5 @@
 %% Load Data
+clearvars;
 
 scalar_sub = load("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\scalar1_with_sub_area.mat").sst;
 
@@ -6,8 +7,8 @@ scalar_sub = load("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\da
 
 offset = 5; % (sub area length / 2)
 
-flow_velocity = 0.5;
-flow_direction_deg = 45;
+flow_velocity = 0.5; %(meter / sec)
+flow_direction_deg = 0; %(degree)
 
 SPATIAL_RESOLUTION_RATIO = 2000; % 2000 meters : 1 pixel
 TIME_RESOLUTION_RATIO = 600; % 600 seconds : 1 snapshot
@@ -34,6 +35,7 @@ dy=v*dt;
 
 ORIGINAL_GRID_X = X * SPATIAL_RESOLUTION_RATIO;
 ORIGINAL_GRID_Y = Y * SPATIAL_RESOLUTION_RATIO;
+
 %% Calculate Vector Field
 
 vector_size_x = cols - (offset * 2) ;
@@ -64,8 +66,12 @@ save("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\scalar2.ma
 
 %% Draw Original Scalar, Shifted Scalar and Vector Field
 
+figure;
 pcolor(scalar1);
-pcolor(scalar2);
+grid on;
 
-% 수정
+figure;
+pcolor(scalar2);
+grid on;
+
 
