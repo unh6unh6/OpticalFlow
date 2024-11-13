@@ -44,5 +44,8 @@ ylabel('Y-axis');
 title('Optical Flow Vector Field');
 grid on;
 
+%%
+% 1. 속도와 방향에 따른 벡터의 정확도 정량화.. 벡터(방향, 크기)
+% 2. m/s 단위로 변환하기.
 
 

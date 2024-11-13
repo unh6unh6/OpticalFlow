@@ -150,14 +150,14 @@ uy=uy_corr;    %%%%%
 pixel_to_meter_ratio = 2000;
 
 % 시간 해상도 (이미지 사이 시간 간격, second)
-delta_t = 600;
+delta_t = 3600;
 
 % 변환된 속도 벡터 필드
-ux = ux * pixel_to_meter_ratio / delta_t * 1000;
-uy = uy * pixel_to_meter_ratio / delta_t * 1000;
+ux = ux * pixel_to_meter_ratio / delta_t;
+uy = uy * pixel_to_meter_ratio / delta_t;
 
 % 결과 저장
-save('C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\OF_vector_field.mat', 'ux', 'uy');
+save('C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\OF_velocity_field.mat', 'ux', 'uy');
 
 %save('C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\data\OF_vector_field.mat', 'ux', 'uy');
 

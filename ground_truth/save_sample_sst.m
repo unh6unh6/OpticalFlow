@@ -14,20 +14,20 @@ axis on;
 %% Set Range
 
 % data1 range
-  %{
+  
 minX = 471;
 maxX = 490;
 minY = 611;
 maxY = 630;
-  %}
+  
 
 % data2 range
-%  %{
+  %{
 minX = 461 + 5;
 maxX = 490 - 5;
 minY = 161 + 5;
 maxY = 190 - 5;
-%  %}		
+  %}		
 %% Save Scalar1.mat
 
 sst_fit_area = sst(minX:maxX, minY:maxY);
