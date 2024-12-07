@@ -7,8 +7,8 @@ scalar_sub = load("C:\Users\min\Desktop\여름연구\OpticalFlow\ground_truth\da
 
 offset = 5; % (sub area length / 2)
 
-flow_velocity = 0.5; %(meter / sec)
-flow_direction_deg = 45; %(degree)
+flow_velocity = 2000/600; %(meter / sec)
+flow_direction_deg = 90; %(degree)
 
 SPATIAL_RESOLUTION_RATIO = 2000; % 2000 meters : 1 pixel
 TIME_RESOLUTION_RATIO = 600; % 600 seconds : 1 snapshot
